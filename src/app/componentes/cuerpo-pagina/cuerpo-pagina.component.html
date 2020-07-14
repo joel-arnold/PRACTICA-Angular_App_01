@@ -2,18 +2,21 @@
     <div class="col">
         <h1>*ngIf</h1>
         <hr>
-        <div *ngIf="mostrar" class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+        <div *ngIf="mostrar" class="card text-white bg-danger mb-3" style="width: 100%;">
             <div class="card-body">
                 <h5 class="card-title"> {{ titulo }}</h5>
                 <p class="card-text">{{ texto }}</p>
             </div>
         </div>
-        <button (click)="mostrar = !mostrar" class="btn btn-inline bg-primary">
+        <button (click)="mostrar = !mostrar" class="btn btn-outline-primary btn-block">
             Mostrar / Ocultar
         </button>
     </div>
     <div class="col">
         <h1>*ngFor</h1>
         <hr>
+        <ul class="list-group">
+            <li *ngFor="let cosa of arreglo; let i = index" class="list-group-item">{{i + 1}} - {{cosa}}</li>
+        </ul>
     </div>
 </div>
